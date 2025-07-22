@@ -20,7 +20,7 @@ public class TransferController {
 	}
 	
 	@PostMapping("/transfer")
-	public ResponseEntity transfer(@RequestBody TransferRequest transferRequest) {
+	public ResponseEntity<Boolean> transfer(@RequestBody TransferRequest transferRequest) {
 		System.out.println(transferRequest);
 		Boolean response = service.transfer(transferRequest);
 		
